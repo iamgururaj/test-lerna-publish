@@ -2,7 +2,7 @@
   "name": "@iamgururaj/lerna-package-one",
   "main": "build/index.js",
   "license": "MIT",
-  "version": "0.1.1-alpha.4+057200e",
+  "version": "0.1.1",
   "files": [
     "build/**"
   ],
@@ -21,5 +21,5 @@
   "dependencies": {
     "react": "^18.0.0"
   },
-  "gitHead": "057200ed50363866e45e08a8214203c63605d756"
+  "gitHead": "ca54975488113d5c5fda2479460ab4f9d2e4e665"
 }

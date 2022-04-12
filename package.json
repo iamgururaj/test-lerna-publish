@@ -5,6 +5,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "files": [
+    "build/**"
+  ],
   "publishConfig": {
     "@iamgururaj:registry": "https://npm.pkg.github.com"
   },

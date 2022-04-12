@@ -1,5 +1,6 @@
 {
   "name": "@iamgururaj/lerna-package-one",
+  "repository": "https://github.com/iamgururaj/test-lerna-publish.git",
   "main": "build/index.js",
   "license": "MIT",
   "version": "0.1.3",
@@ -21,5 +22,5 @@
   "dependencies": {
     "react": "^18.0.0"
   },
-  "gitHead": "9b96add2d510f2cfa6f127d7d4c9fa108d9f441b"
+  "gitHead": "fd00af9b940c59ca011cf85dc14faad4c1a83038"
 }

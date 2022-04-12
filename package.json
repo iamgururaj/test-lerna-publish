@@ -1,0 +1,19 @@
+{
+  "name": "@iamgururaj/test-lerna-publish",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "publishConfig": {
+    "@iamgururaj:registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "lerna run build",
+    "lerna:pub": "lerna publish --canary prepatch --force-publish --skip-git",
+    "watch": "lerna run --parallel watch",
+    "bootstrap": "lerna bootstrap"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}

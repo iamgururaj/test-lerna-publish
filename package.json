@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "@iamgururaj/test-lerna-publish",
+  "main": "build/index.js",
   "repository": "https://github.com/iamgururaj/test-lerna-publish.git",
   "workspaces": [
     "packages/*"

@@ -1,6 +1,7 @@
 {
-  "name": "@iamgururaj/test-lerna-publish",
   "private": true,
+  "name": "@iamgururaj/test-lerna-publish",
+  "repository": "https://github.com/iamgururaj/test-lerna-publish.git",
   "workspaces": [
     "packages/*"
   ],

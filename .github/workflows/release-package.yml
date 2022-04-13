@@ -31,8 +31,8 @@ jobs:
           git config --global user.email "gururaj.ceg@gmail.com"
           git config --global user.name "Gururaj"
 
-      - name: NPM WHOAMI
-        run: npm whoami
+      # - name: NPM WHOAMI
+      #   run: npm whoami
 
       - name: YARN INSTALL
         run: yarn

@@ -20,8 +20,8 @@ jobs:
           fetch-depth: 0 # Pulls all history and tags for lerna to detect what packages changed
           token: ${{ secrets.GITHUB_TOKEN }} # This token is available by default
 
-      - name: GIT PREPARE REPOSITORY
-        run: git checkout main && git pull
+      # - name: GIT PREPARE REPOSITORY
+      #   run: git checkout main && git pull
 
       - name: NODE SETUP WITH YARN CACHE
         uses: actions/setup-node@v3
@@ -32,8 +32,10 @@ jobs:
 
       - name: GIT USER CONFIG
         run: |
-          git config --global user.email "gururaj.ceg@gmail.com"
-          git config --global user.name "Gururaj"
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          # git config --global user.email "gururaj.ceg@gmail.com"
+          # git config --global user.name "Gururaj"
 
       # - name: NPM WHOAMI
       #   run: npm whoami

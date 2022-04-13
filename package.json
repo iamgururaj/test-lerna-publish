@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "lerna run build",
-    "lerna:pub": "lerna publish --canary patch --no-verify-access --yes --skip-git ",
+    "lerna:pub": "lerna publish patch --no-verify-access --yes --skip-git ",
     "watch": "lerna run --parallel watch",
     "bootstrap": "lerna bootstrap"
   },

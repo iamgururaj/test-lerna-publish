@@ -20,7 +20,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }} # This token is available by default
 
       - name: GIT PREPARE REPOSITORY
-        run: git checkout "${GITHUB_REF:11}"
+        run: git checkout main
 
       - name: NODE SETUP WITH YARN CACHE
         uses: actions/setup-node@v3

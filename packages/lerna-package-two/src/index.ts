@@ -1,0 +1,1 @@
+export {lernaHelloTwo, lernaGoodbyeTwo, Type2, Type1} from './LernaHello';

@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "lerna run build",
-    "lerna:pub": "lerna publish patch --no-verify-access --yes",
+    "lerna:pub": "lerna publish patch --no-verify-access --yes --conventional-commits",
     "watch": "lerna run --parallel watch",
     "bootstrap": "lerna bootstrap"
   },

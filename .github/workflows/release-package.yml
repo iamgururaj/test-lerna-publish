@@ -19,6 +19,9 @@ jobs:
           fetch-depth: 0 # Pulls all history and tags for lerna to detect what packages changed
           token: ${{ secrets.GITHUB_TOKEN }} # This token is available by default
 
+      - name: GIT PREPARE REPOSITORY
+        run: git checkout "${GITHUB_REF:11}"
+
       - name: NODE SETUP WITH YARN CACHE
         uses: actions/setup-node@v3
         with:

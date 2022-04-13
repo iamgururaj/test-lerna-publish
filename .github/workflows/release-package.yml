@@ -7,18 +7,38 @@ on:
 jobs:
   publish-gpr:
     runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # set this token manually
     permissions:
       packages: write
       contents: read
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: GIT CHECKOUT WITH DEPTH 0
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Pulls all history and tags for lerna to detect what packages changed
+          token: ${{ secrets.GITHUB_TOKEN }} # This token is available by default
+
+      - name: NODE SETUP WITH YARN CACHE
+        uses: actions/setup-node@v3
         with:
           node-version: 16.14.2
-          registry-url: https://npm.pkg.github.com/
+          #registry-url: https://npm.pkg.github.com/
           cache: yarn
-      - run: yarn
-      - run: yarn build
-      - run: yarn lerna:pub
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: GIT USER CONFIG
+        run: |
+          git config --global user.email "gururaj.ceg@gmail.com"
+          git config --global user.name "Gururaj"
+
+      - name: NPM WHOAMI
+        run: npm whoami
+
+      - name: YARN INSTALL
+        run: yarn
+
+      - name: YARN BUILD
+        run: yarn build
+
+      - name: LERNA PUBLISH
+        run: npm run lerna:pub
